@@ -1,0 +1,105 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background-color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+#main{
+    height: 100%;
+    position: relative;
+}
+.allContentSpt {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr; 
+    grid-template-rows: 1fr auto;  /* Cambia a dos filas y una fila para el footer */
+    gap: 8px;
+    height: 100%; /* Resta la altura del footer de la altura total de la ventana */
+    max-height: 100%;
+    grid-template-areas:
+        "leftContent rightContent rightContent"
+        "footers footers footers"; /* Asigna el footer a la última fila */
+    position: relative;
+}
+    .leftContentSpt{
+        display: flex;
+        grid-area: leftContent;
+        position: relative;
+        flex-direction: column;
+        width: 420px;
+        min-height: 0;
+        overflow-y: auto;
+        height: 80%;
+        
+    }
+        .navLeftContent{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+            .leftBox1{
+                background-color: #121212;
+                border-radius: 8px;
+                
+            }
+                .listLeft1{
+                    padding: 8px 12px;
+                    margin: 0;
+                }
+                    .leftOne{
+                        padding: 4px 12px;
+                    }
+                .contentLeftOne{
+                    color: #b3b3b3;
+                    display: flex;
+                    gap: 20px;
+                    height: 40px;
+                    align-items: center;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        
+                            color: white;
+                        
+                    }
+                }
+                    .textLeftOne{
+                        font-weight: 700;
+                        font-size: 1rem;
+                    }
+
+.rightContentSpt {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border-radius: 8px;
+    grid-area: rightContent;
+    position: relative;
+    overflow-y: auto; /* Agrega barras de desplazamiento vertical si es necesario */
+    height: 100%; /* Limita la altura del contenido al 100% del tamaño del contenedor */
+    min-height: 0;
+    overflow: auto;
+}
+
+
+.now-playing-bar{
+    grid-area: footers;
+    background-color: #121212;
+    align-content: center;
+    position: relative;
+    height: 70px;
+}
