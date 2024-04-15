@@ -103,3 +103,99 @@ a{
     position: relative;
     height: 70px;
 }
+    .footer-playing-bar{
+        display: flex;
+        min-width: 620px;
+        flex-direction: column;
+        height: auto;
+    }
+        .playing-bar{
+            display: flex;
+            align-items: center;
+        }
+            .left-footer{
+                min-width: 180px;
+                width: 30%;
+                padding-inline-start: 8px;
+            }
+                .contain-leftfooter{
+                    flex-direction: row;
+                }
+                    .img-playingb{
+                        margin-inline-end: 8px;
+                        width: 56px;
+                        height: 56px;
+                    }
+                        .img-conf{
+                            height: 100%;
+                            width: 100%;
+                        }
+        .mid-footer{
+            max-width: 722px;
+            width: 40%;
+        }
+            .player-controls{
+                display: flex;
+                flex-direction: column;
+            }
+                .up-control{
+                    gap: 16px;
+                    margin-bottom: 8px;
+                    width: 100%;
+                    display: flex;
+                }
+                    .left-control{
+                        justify-content: flex-end;
+                        display: flex;
+                        flex: 1;
+                        gap: 8px;
+                    }
+                        .all-controls{
+                            width: 32px;
+                            height: 32px;
+                            background-color: #ffffff00;
+                            border: none;
+                        }
+                            .playing-btts{
+                                color: #a5a5a5;
+                                
+                                &:hover{
+                                    color: white;
+                                }
+                            }
+                    .play-btt{
+                        
+                        display: flex;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 32px;
+                        border: none;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                    }
+
+                    .right-control{
+                        display: flex;
+                        flex: 1;
+                        gap: 8px;
+                    }
+
+                .down-control{
+
+                }
+
+                    .bar-progres{
+                        height: 12px;
+                        width: 100%;
+                        position: relative;
+                    }
+
+                    
+            .right-footer{
+                display: flex;
+                min-width: 180px;
+                width: 30%;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
