@@ -1,3 +1,4 @@
+
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
@@ -241,8 +242,359 @@ a{
 
 .now-playing-bar{
     grid-area: footers;
-    background-color: #121212;
+    background-color: #000;
     align-content: center;
     position: relative;
     height: 70px;
 }
+    .footer-playing-bar{
+        display: flex;
+        min-width: 620px;
+        flex-direction: column;
+        height: auto;
+    }
+        .playing-bar{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 72px;
+        }
+            .left-footer{
+                min-width: 180px;
+                width: 30%;
+                padding-inline-start: 8px;
+            }
+                .contain-leftfooter{
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    display: flex;
+                    align-items: center;
+                }
+                    .img-playingb{
+                        margin-inline-end: 8px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                    }
+                        .imgcont{
+                            border: 0;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            padding: 0;
+                        }
+                            .iCPB{
+                                width: 56px;
+                                height: 56px;
+                                display: block;
+                                margin: 0;
+                                position: relative;
+                                
+                            }
+                                .img-conf{
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                    .tema-playingb
+                    {
+                        margin: 0 8px;
+                    }
+                        .nameSong{
+                            font-size: 0.875rem;
+                            font-weight: 400;
+                            color: #fff;
+                            width: 100%;
+                            margin-block: 0px;
+                        }
+                        .btt-playingb{
+                            font-size: 0.75rem;
+                            font-weight: 400;
+                            display: inline-flex;
+                            width: 100%;
+                            color: #a7a7a7;
+                        }
+                    .add-list{
+                        border: 0;
+                        background-color: transparent;
+                    }
+                        .textAddList > svg {
+                            fill: rgb(167, 167, 167);
+                            width: 16px;
+                            height: 16px;
+                            
+                            &:hover{
+                                fill: #fff;
+                                cursor: pointer;
+                            }
+                        }
+
+            .mid-footer{
+                max-width: 722px;
+                width: 40%;
+            }
+                .player-controls{
+                    display: flex;
+                    flex-direction: column;
+                }
+                    .up-control{
+                        gap: 16px;
+                        margin-bottom: 8px;
+                        width: 100%;
+                        display: flex;
+                    }
+                        .left-control{
+                            justify-content: flex-end;
+                            display: flex;
+                            flex: 1;
+                            gap: 8px;
+                        }
+                            .all-controls{
+                                width: 32px;
+                                height: 32px;
+                                background-color: #ffffff00;
+                                border: none;
+                                cursor: pointer;
+                            }
+                                .playing-btts{
+                                    color: #a5a5a5;
+                                    
+                                    &:hover{
+                                        color: white;
+                                    }
+                                }
+                            .play-btt{
+                            
+                                display: flex;
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 32px;
+                                border: none;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 0;
+                                cursor: pointer;
+                                
+                                &:hover{
+                                    transform: scale(1.09);
+                                }
+                            }
+                            .right-control{
+                                display: flex;
+                                flex: 1;
+                                gap: 8px;
+                            }
+
+                    .down-control{
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 8px;
+                    }    
+                        .textProgress{
+                            font-size: 0.75rem;
+                            font-weight: 400;
+                            min-width: 40px;
+                            text-align: right;
+                            margin-block: 0px;
+                            color: #a7a7a7;
+                        }
+                        .tPLeft{
+                            text-align: left;
+                        }     
+                        .bar-progres{
+                        height: 12px;
+                        width: 100%;
+                        position: relative;
+                        }
+                            .time-progres{
+                                height: 100%;
+                                overflow: hidden;
+                                touch-action: none;
+                                position: absolute;
+                                width: 100%;
+                                
+                                
+                            }
+                                .tProgres{
+                                    border-top-left-radius: 2px;
+                                    border-top-right-radius: 2px;
+                                    border-bottom-left-radius: 2px; 
+                                    border-bottom-right-radius: 2px;
+                                    height: 4px;
+                                    width: 100%;
+                                    background-color: rgba(255, 255, 255, 0.3);
+                                    display: flex;
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                    .contentTimeProgres{
+                                        overflow: hidden;
+                                        border-top-left-radius: 2px;
+                                    border-top-right-radius: 2px;
+                                    border-bottom-left-radius: 2px; 
+                                    border-bottom-right-radius: 2px;
+                                        height: 4px;
+                                        width: 100%;
+                                    }
+                                        .countProgres{
+                                            background-color: #fff;
+                                            border-top-left-radius: 2px;
+                                    border-top-right-radius: 2px;
+                                    border-bottom-left-radius: 2px; 
+                                    border-bottom-right-radius: 2px;
+                                            height: 4px;
+                                            transform: matrix(1, 0, 0, 1, -320.904, 0);
+                                            width: 100%;
+                                            will-change: transform;
+
+                                            &:hover{
+                                                background-color: #1db954;
+                                            }
+                                        }
+                                        .countProgreshov {
+                                            
+                                            cursor:  pointer;
+                                            left: 49%;
+                                            margin-left: -6px;
+                                            position: absolute;
+                                            z-index: 100;
+                                            background-color: #fff !important;
+                                            border-radius: 50%;
+                                            box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+                                            height: 12px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            visibility: hidden; /* Ocultado por defecto */
+                                            width: 12px;
+                                        }
+
+                                        .volumeProgres{
+                                            background-color: #fff;
+                                            border-top-left-radius: 2px;
+                                    border-top-right-radius: 2px;
+                                    border-bottom-left-radius: 2px; 
+                                    border-bottom-right-radius: 2px;
+                                            height: 4px;
+                                            transform: matrix(1, 0, 0, 1, -45, 0);
+                                            width: 100%;
+                                            will-change: transform;
+
+                                            &:hover{
+                                                background-color: #1db954;
+                                            }
+                                        }
+                                        .volumeProgreshov {
+                                            cursor: pointer;
+                                            left: 50%;
+                                            margin-left: -6px;
+                                            position: absolute;
+                                            z-index: 100;
+                                            background-color: #fff;
+                                            border-radius: 50%;
+                                            box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+                                            height: 12px;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            visibility: hidden; /* Ocultado por defecto */
+                                            width: 12px;
+                                        }
+                                        
+                                        /* Haz que countProgreshov sea visible cuando se pase el cursor por tProgres o contentTimeProgres */
+                                            .bar-progres:hover .countProgres,
+                                            .time-progres:hover .countProgres,
+                                            .tProgres:hover .countProgres,
+                                            .tProgres:hover .volumeProgres{
+                                                background-color: #1db954; /* Color verde */
+                                            }
+
+                                            .bar-progres:hover .countProgreshov,
+                                            .time-progres:hover .countProgreshov,
+                                            .tProgres:hover .countProgreshov,
+                                            .tProgres:hover .volumeProgreshov{
+                                                visibility: visible; /* Muestra countProgreshov */
+                                            }
+
+                    
+            .right-footer{
+                display: flex;
+                min-width: 180px;
+                width: 30%;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            .btt-bttnrepro {
+                width: 32px;
+                height: 32px;
+                border: none;
+                background: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                position: relative;
+            }
+            
+            /* Estilos para el span que contiene el SVG */
+            .btt-icons {
+                width: 16px;
+                height: 16px;
+            }
+            
+            /* Estilos para el SVG (inicialmente blanco) */
+                .span-bttnicon > path {
+                    fill: rgba(255, 255, 255, 0.7);
+                }
+                
+                /* Estilos de hover: cambia el color del SVG a blanco */
+                .btt-bttnrepro:hover .span-bttnicon > path {
+                    fill: #fff;
+                }
+                
+                /* Estilos para el estado activo: cambia el color del SVG a verde */
+                .btt-bttnrepro:active .span-bttnicon > path {
+                    fill: rgb(29, 185, 84);
+                }
+            
+                .btt-bttnrepro[data-active="true"] .span-bttnicon > path {
+                    fill: rgb(29, 185, 84);
+                }
+                
+                .btt-bttnrepro[data-active="true"] .btt-icons::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -4px; /* Ajusta según sea necesario */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background-color: rgb(29, 185, 84);
+                }
+            /* Estilo para agregar un punto verde debajo del ícono cuando el botón está activo */
+            .btt-bttnrepro:active .btt-icons::after {
+                content: "";
+                position: absolute;
+                bottom: -4px; /* Ajusta la posición del punto según sea necesario */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: rgb(29, 185, 84);
+            }
+                .btt-volumerepro{
+                    display: flex;
+                    height: 32px;
+                    margin-right: 8px;
+
+                    position: relative;
+                    align-items: center;
+                    flex: 0 1 125px;
+                }
+                    .volume-progres{
+                        height: 12px;
+                        position: relative;
+                        width: 100%;
+                    }
